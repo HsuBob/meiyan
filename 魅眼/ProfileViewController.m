@@ -28,7 +28,7 @@
     [HeaderView addSubview:IconView];
     
     UILabel *namelab=[[UILabel alloc]initWithFrame:CGRectMake(92, 85, 80, 20)];
-    namelab.text=@"大头儿子";
+    namelab.text=@"魅眼科技";
     namelab.font=[UIFont systemFontOfSize:12];
     [HeaderView addSubview:namelab];
     

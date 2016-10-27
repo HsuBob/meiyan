@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MYTabBaController.h"
+#import "iflyMSC/IFlyMSC.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 @interface AppDelegate ()
 
 @end
@@ -16,6 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [AMapServices sharedServices].apiKey=@"2b3839ddcf75b575219743daafc55def";
+    
+    
+    
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"57b413f7"];
+    [IFlySpeechUtility createUtility:initString];
     
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     

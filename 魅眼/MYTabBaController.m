@@ -11,6 +11,9 @@
 #import "MYNavController.h"
 #import "MainViewController.h"
 #import "TicketViewController.h"
+#import "TranslateViewController.h"
+#import "SailingViewController.h"
+#import "TourViewController.h"
 @interface MYTabBaController ()
 
 @end
@@ -26,15 +29,15 @@
     TicketViewController *VC2=[[TicketViewController alloc]init];
      [self addChildVc:VC2 Title:@"门票" Image:@"435" Selectedimage:@"435-h"];
     
-    UIViewController *VC3=[[UIViewController alloc]init];
+    TourViewController *VC3=[[TourViewController alloc]init];
    
    [self addChildVc:VC3 Title:@"导游" Image:@"0412" Selectedimage:@"0412-h"];
     
-    UIViewController *VC4=[[UIViewController alloc]init];
+    TranslateViewController *VC4=[[TranslateViewController alloc]init];
    
      [self addChildVc:VC4 Title:@"译得" Image:@"Calendar" Selectedimage:@"Calendar-h"];
     
-    UIViewController *VC5=[[UIViewController alloc]init];
+    SailingViewController *VC5=[[SailingViewController alloc]init];
     [self addChildVc:VC5 Title:@"出发" Image:@"Rocket" Selectedimage:@"Rocket-h"];
 
 }

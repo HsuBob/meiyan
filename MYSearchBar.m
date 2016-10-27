@@ -20,7 +20,7 @@
     if (self) {
         self.font = [UIFont systemFontOfSize:15];
         self.placeholder=@"搜索";
-        self.textAlignment=NSTextAlignmentCenter;
+//        self.textAlignment=NSTextAlignmentCenter;
         
         self.borderStyle = UITextBorderStyleRoundedRect;
         UIImageView *LeftView = [[UIImageView alloc] init];
@@ -46,10 +46,9 @@
     }
     return self;
 }
-
 + (instancetype)searchBar
 {
-    return [[self alloc] init];
+    return [[self alloc]init];
 }
 
 /*

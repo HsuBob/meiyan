@@ -31,75 +31,50 @@
     [self.view addSubview:self.Backimage];
     
     
-    UILabel *phonelab=[[UILabel alloc]initWithFrame:CGRectMake(10, 155, 70, 40)];
-    phonelab.text=@"手机号:";
-    phonelab.textAlignment=NSTextAlignmentLeft;
-    phonelab.font=[UIFont systemFontOfSize:13];
-    phonelab.textColor=[UIColor lightTextColor];
-    [self.view addSubview:phonelab];
-    
-    
-    UITextField *phonetf=[[UITextField alloc]initWithFrame:CGRectMake(65, 155, 140, 25)];
+    UITextField *phonetf=[[UITextField alloc]initWithFrame:CGRectMake(25, 155, 250, 30)];
+    phonetf.placeholder=@" 请输入手机号";
+    phonetf.layer.cornerRadius=3;
+    phonetf.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:phonetf];
-    
-    UIImageView *imageview1=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gd115"]];
-    imageview1.frame=CGRectMake(65, 185, 145, 1);
-    [self.view addSubview:imageview1];
-
+ 
 
     
-    UILabel *examlab=[[UILabel alloc]initWithFrame:CGRectMake(10, 200, 70, 40)];
-    examlab.text=@"验证码:";
-    examlab.textAlignment=NSTextAlignmentLeft;
-    examlab.font=[UIFont systemFontOfSize:13];
-    examlab.textColor=[UIColor lightTextColor];
-    [self.view addSubview:examlab];
-    
-    UITextField *examtf=[[UITextField alloc]initWithFrame:CGRectMake(65, 207, 130, 25)];
-//    tf.backgroundColor=[UIColor whiteColor];
+    UITextField *examtf=[[UITextField alloc]initWithFrame:CGRectMake(25, 205, 140, 30)];
+    examtf.backgroundColor=[UIColor whiteColor];
+    examtf.placeholder=@" 请输入验证码";
+    examtf.layer.cornerRadius=3;
+
     [self.view addSubview:examtf];
     
-    UIImageView *imageview=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gd115"]];
-    imageview.frame=CGRectMake(65, 230, 145, 1);
-    [self.view addSubview:imageview];
     
     
-    UILabel *namelab=[[UILabel alloc]initWithFrame:CGRectMake(10, 245, 70, 40)];
-    namelab.text=@"昵称:";
-    namelab.textAlignment=NSTextAlignmentLeft;
-    namelab.font=[UIFont systemFontOfSize:13];
-    namelab.textColor=[UIColor lightTextColor];
-    [self.view addSubview:namelab];
     
     
-    UITextField *nametf=[[UITextField alloc]initWithFrame:CGRectMake(65, 245, 140, 25)];
+    UITextField *nametf=[[UITextField alloc]initWithFrame:CGRectMake(25, 255, 250, 30)];
+    nametf.placeholder=@" 请输入呢称";
+    nametf.backgroundColor=[UIColor whiteColor];
+    nametf.layer.cornerRadius=3;
+
     [self.view addSubview:nametf];
     
-    UIImageView *imageview2=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gd115"]];
-    imageview2.frame=CGRectMake(65, 275, 145, 1);
-    [self.view addSubview:imageview2];
+  
+    
+    
+    UITextField *codetf=[[UITextField alloc]initWithFrame:CGRectMake(25, 305, 250, 30)];
+    codetf.placeholder=@" 请输入密码";
+    codetf.layer.cornerRadius=3;
 
-    
-    UILabel *codelab=[[UILabel alloc]initWithFrame:CGRectMake(10, 290, 70, 40)];
-    codelab.text=@"密码:";
-    codelab.textAlignment=NSTextAlignmentLeft;
-    codelab.font=[UIFont systemFontOfSize:13];
-    codelab.textColor=[UIColor lightTextColor];
-    [self.view addSubview:codelab];
-    
-    
-    UITextField *codetf=[[UITextField alloc]initWithFrame:CGRectMake(65, 290, 140, 25)];
+     codetf.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:codetf];
     
-    UIImageView *imageview3=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"gd115"]];
-    imageview3.frame=CGRectMake(65, 325, 145, 1);
-    [self.view addSubview:imageview3];
-
   //设置发送倒计时
-    but=[[UIButton alloc]initWithFrame:CGRectMake(215, 205, 90, 20)];
+    but=[[UIButton alloc]initWithFrame:CGRectMake(185, 205, 90, 30)];
     but.titleLabel.font=[UIFont systemFontOfSize:12];
-    [but setTitle:@"获取" forState:UIControlStateNormal];
+    [but setTitle:@"获取验证码" forState:UIControlStateNormal];
+    but.backgroundColor=XBColor(250, 204, 44);
     but.layer.borderWidth=1;
+    but.layer.cornerRadius=3;
+
     but.layer.borderColor=(__bridge CGColorRef _Nullable)([UIColor whiteColor]);
     [but setTitleColor:XBColor(48, 80, 143) forState:UIControlStateNormal];
     [but setTitleColor:[UIColor lightTextColor] forState:UIControlStateSelected];
@@ -110,21 +85,37 @@
     [self.view addSubview:but];
     
     
-    UIButton *but1=[[UIButton alloc]initWithFrame:CGRectMake(self.view.width/2-120, 350, 200, 30)];
+    UIButton *but1=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    but1.frame=     CGRectMake(25, 370, 250, 30);
     but1.backgroundColor=[UIColor whiteColor];
-    [but1 setTitle:@"注册" forState:UIControlStateNormal];
-    [but1 setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [but1 setTitle:@"注册并登陆" forState:UIControlStateNormal];
+    [but1 setTitleColor:XBColor(73, 199, 236) forState:UIControlStateNormal];
+    but1.layer.masksToBounds=YES;
+    but1.layer.cornerRadius=4;
     [but1 addTarget:self action:@selector(registertest) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:but1];
     
     
-    UIImageView *iconview=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"60X60"]];
-    iconview.frame=CGRectMake(self.view.width/2-30, 80, 50, 50);
+    UIImageView *iconview=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"zc_logo"]];
+    iconview.frame=CGRectMake(self.view.width/2-30, 60, 60, 60);
     [self.view addSubview:iconview];
     
     
-}
+    
+    UIButton *but2=[[UIButton alloc]initWithFrame:CGRectMake(self.view.width/2-90, 410, 180, 30)];
+    but2.backgroundColor=[UIColor clearColor];
+    but2.titleLabel.font=[UIFont systemFontOfSize:13];
+    [but2 setTitle:@"已有账号，直接登陆" forState:UIControlStateNormal];
+    [but2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [but2 addTarget:self action:@selector(backlogin) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:but2];
 
+    
+}
+-(void)backlogin
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 -(void)registertest
 {
     

@@ -17,11 +17,26 @@
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     self = [super initWithRootViewController:rootViewController];
     if (self) {
-        UIView *view = [[UIView alloc] init];
-        view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64);
-        [self.view insertSubview:view belowSubview:self.navigationBar];
-        [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"tm"] forBarMetrics:UIBarMetricsCompact];
+        
+        
+//        [UIView animateWithDuration:0.5 animations:^{
+//            UIView *view = [[UIView alloc] init];
+//            view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64);
+//            [self.view insertSubview:view belowSubview:self.navigationBar];
+        
+//        [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
+//        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        
+        
+        [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"tm"] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationBar setShadowImage:[UIImage imageNamed:@"tm"]];
+        [self.navigationBar setBackgroundColor:[UIColor clearColor]];
+        [self.navigationBar setTintColor:[UIColor clearColor]];
+        self.navigationBar.translucent=YES;
         self.navigationBar.layer.masksToBounds = YES;// 去掉横线（没有这一行代码导航栏的最下面还会有一个横线）
+//        }];
+        
+     
     }
     return self;
 }
